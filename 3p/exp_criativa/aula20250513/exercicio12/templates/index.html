@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <title>Casa Conectada</title>
+    </head>
+    <body>
+        <h2>Minha Casa</h2>
+        <h3>Menu Principal:</h3>
+        <ul>
+            {% for key, value in info.items() %}
+                <li><a href="{{ value }}">{{ key }}</a></li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>

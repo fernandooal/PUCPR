@@ -1,0 +1,73 @@
+### Exercício 1: Certificados Auto-Assinados ###
+
+Aguardando clientes
+ciphers negociados: 
+('TLS_AES_256_GCM_SHA384', 'TLSv1.3', 256)
+('TLS_CHACHA20_POLY1305_SHA256', 'TLSv1.3', 256)
+('TLS_AES_128_GCM_SHA256', 'TLSv1.3', 128)
+('ECDHE-ECDSA-AES256-GCM-SHA384', 'TLSv1.2', 256)
+('ECDHE-RSA-AES256-GCM-SHA384', 'TLSv1.2', 256)
+('ECDHE-ECDSA-AES128-GCM-SHA256', 'TLSv1.2', 128)
+('ECDHE-RSA-AES128-GCM-SHA256', 'TLSv1.2', 128)
+('ECDHE-ECDSA-CHACHA20-POLY1305', 'TLSv1.2', 256)
+('ECDHE-RSA-CHACHA20-POLY1305', 'TLSv1.2', 256)
+('ECDHE-ECDSA-AES256-SHA384', 'TLSv1.2', 256)
+('ECDHE-RSA-AES256-SHA384', 'TLSv1.2', 256)
+('ECDHE-ECDSA-AES128-SHA256', 'TLSv1.2', 128)
+('ECDHE-RSA-AES128-SHA256', 'TLSv1.2', 128)
+('DHE-RSA-AES256-GCM-SHA384', 'TLSv1.2', 256)
+('DHE-RSA-AES128-GCM-SHA256', 'TLSv1.2', 128)
+('DHE-RSA-AES256-SHA256', 'TLSv1.2', 256)
+('DHE-RSA-AES128-SHA256', 'TLSv1.2', 128)
+Cipher selecionado:  ('TLS_AES_256_GCM_SHA384', 'TLSv1.3', 256)
+Recebi o certificado de Cliente ID1 emitido por Cliente ID1
+Aguardando clientes
+ciphers negociados: 
+('TLS_AES_256_GCM_SHA384', 'TLSv1.3', 256)
+('TLS_CHACHA20_POLY1305_SHA256', 'TLSv1.3', 256)
+('TLS_AES_128_GCM_SHA256', 'TLSv1.3', 128)
+('ECDHE-ECDSA-AES256-GCM-SHA384', 'TLSv1.2', 256)
+('ECDHE-RSA-AES256-GCM-SHA384', 'TLSv1.2', 256)
+('ECDHE-ECDSA-AES128-GCM-SHA256', 'TLSv1.2', 128)
+('ECDHE-RSA-AES128-GCM-SHA256', 'TLSv1.2', 128)
+('ECDHE-ECDSA-CHACHA20-POLY1305', 'TLSv1.2', 256)
+('ECDHE-RSA-CHACHA20-POLY1305', 'TLSv1.2', 256)
+('ECDHE-ECDSA-AES256-SHA384', 'TLSv1.2', 256)
+('ECDHE-RSA-AES256-SHA384', 'TLSv1.2', 256)
+('ECDHE-ECDSA-AES128-SHA256', 'TLSv1.2', 128)
+('ECDHE-RSA-AES128-SHA256', 'TLSv1.2', 128)
+('DHE-RSA-AES256-GCM-SHA384', 'TLSv1.2', 256)
+('DHE-RSA-AES128-GCM-SHA256', 'TLSv1.2', 128)
+('DHE-RSA-AES256-SHA256', 'TLSv1.2', 256)
+('DHE-RSA-AES128-SHA256', 'TLSv1.2', 128)
+Cipher selecionado:  ('TLS_AES_256_GCM_SHA384', 'TLSv1.3', 256)
+Recebi o certificado de Cliente ID2 emitido por Cliente ID2
+Aguardando clientes
+
+
+### Exercicio 2: Certificados Assinados por CA Privada ###
+
+Não consegui rodar o segundo exercício por algum erro de compatibilidade, então segue o meu código:
+
+[servidor.py]
+server_ip = '127.0.0.1'
+server_port = 40232
+my_cert = 'server.crt'
+my_key = 'server.key'
+peer_cert = 'bcc_CA.crt'
+
+[cliente.py]
+host_addr = '127.0.0.1'
+host_port = 40232
+peer_name = 'server.bcc.com'
+peer_cert = 'bcc_CA.crt'
+my_cert = 'client.crt'
+my_key = 'client.key'
+
+[cliente2.py]
+host_addr = '127.0.0.1'
+host_port = 40232
+peer_name = 'server.bcc.com'
+peer_cert = 'bcc_CA.crt'
+my_cert = 'client2.crt'
+my_key = 'client2.key'

@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <title>Minha Casa</title>
+    </head>
+    <body>
+        <h1>Atuadores do Quarto:</h1>
+        <ul>
+            {% for atuador in atuadores %}
+                <li>{{ atuador }}</li>
+            {% endfor %}
+        </ul>
+        <p>Voltar para o <a href="/bedroom">Menu do Quarto</a>!</p>
+    </body>
+</html>

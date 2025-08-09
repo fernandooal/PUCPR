@@ -1,0 +1,50 @@
+Honda
+Civic Touring
+2021
+20000
+120000.00
+Chevrolet
+Onix LTZ
+2020
+30000
+70000.00
+Volkswagen
+Golf GTI
+2019
+45000
+130000.00
+Fiat
+Argo Trekking
+2022
+15000
+75000.00
+Hyundai
+Creta Prestige
+2023
+5000
+115000.00
+Nissan
+Kicks Exclusive
+2021
+25000
+95000.00
+Jeep
+Compass Limited
+2022
+10000
+160000.00
+Peugeot
+208 Griffe
+2020
+35000
+85000.00
+Mitsubishi
+Outlander Sport
+2023
+0
+180000.00
+BMW
+X1 sDrive20i
+2024
+0
+230000.00

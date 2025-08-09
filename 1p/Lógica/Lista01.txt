@@ -1,0 +1,88 @@
+Exercício 1. Simbólico para natural.
+Sejam as proposições:
+• p: “Está frio.”
+• q: “Está chovendo.”
+Traduzir para a linguagem natural as seguinte proposições simbólicas:
+
+a) ~p 
+NÃO está frio;
+b) p ^ q
+Está frio E está chovendo
+c) p \/ q
+Está frio OU está chovendo
+d) q↔p
+Está chovendo SE, E SOMENTE SE, está frio
+e) p→(~q)
+SE está frio ENTÃO NÃO está chovendo
+f) p \/ (~q)
+Está frio OU NÃO está chovendo
+g) (~p) ^ (~q)
+Não está frio E não está chovendo
+h) p ↔ (~q)
+Está frio se, e somente se, não está chovendo
+i) (p ^ (~q))→p
+SE está frio E NÃO está chovendo ENTÃO está frio
+
+
+
+Exercício 2. Natural para simbólico.
+Sejam as proposições:
+• p: “Manuela é rica.”
+• q: “Manuela é feliz.”
+Traduzir para linguagem simbólica (lógica) as frases abaixo.
+a) “Manuela é pobre, mas é feliz.”
+((~p) ^ q)
+b) “Manuela é rica e infeliz.”
+(p ^ (~q))
+c) “Manuela é pobre e infeliz.”
+((~p) ^ (~q))
+d) “Manuela é pobre ou rica, mas é feliz.”
+((~p) \/ p) ^ q 
+
+
+
+Exercício 3. Simbólico para natural.
+Sejam as proposições:
+• p: “Jorge é rico.”
+• q: “Carlos é feliz.”
+Traduzir para a linguagem natural as seguinte proposições simbólicas.
+a) q→p
+SE Carlos é feliz ENTÃO Jorge é rico
+b) ~(~p)
+Jorge NÃO é POBRE 
+c) ~((~p) ^ (~q))
+NÃO é verdade que Jorge é POBRE e que Carlos é INFELIZ
+
+
+
+Exercício 4. Natural para simbólico.
+Sejam as proposições:
+• p: “Carlos fala francês.”
+• q: “Carlos fala inglês.”
+• r: “Carlos fala alemão.”
+Traduzir para linguagem simbólica (lógica) as frases abaixo.
+a) “Carlos fala francês ou inglês, mas não fala alemão.”
+(p \/ q) ^ ~r
+b) “Carlos fala francês e inglês, ou não fala francês e alemão.”
+(p ^ q) \/ (~(p ^ r))
+c) "É falso que Carlos fala francês mas que não fala alemão."
+~(p ^ (~r))
+d) "É falso que Carlos fala inglês ou alemão mas que não fala francês."
+~((q \/ r) ^ ~p )
+
+
+
+Exercício 5. Natural para simbólico.
+Sejam as proposições:
+• p: “O número 596 é divisível por 2.”
+• q: “O número 596 é divisível por 4.”
+• r: “O número 596 é divisível por 3.”
+Traduzir para linguagem simbólica (lógica) as frases abaixo.
+a) “É falso que número 596 é divisível por 2 e por 3, ou o número 596 não é divisível por 4.”
+(~(p ^ r) \/ ~q)
+b) “O número 596 não é divisível por 2 ou por 4, mas é divisível por 3.”
+~(p \/ q) ^ r
+c) “Se não é verdade que o número 596 é divisível por 3, então ele é divisível por 2 e não por 4.”
+~r → p ^ (~q)
+d) “É falso que o número 596 não é divisível por 2 e por 4, mas é divisível por 3 e por 2.”
+~(~(p ^ q)) ^ (r ^ p)

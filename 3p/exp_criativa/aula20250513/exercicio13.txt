@@ -1,0 +1,26 @@
+Descrever resumidamente como cada um dos seguintes métodos funcionam? Exemplifique como a solicitação deve ser
+realizada e como ocorre a resposta. Por fim, realize uma comparação entre os métodos.
+
+=GET
+O método GET é utilizado para solicitar dados de um recurso no servidor. Ele é seguro e não deve causar efeitos colaterais, ou seja, não altera o estado do recurso. É comumente usado para recuperar informações como páginas, listas de dados ou detalhes de um item. Por exemplo, ao fazer uma solicitação GET /produtos/123, o servidor retorna as informações do produto com ID 123. A resposta geralmente vem com o status 200 OK e o conteúdo no corpo, como JSON ou HTML.
+
+=POST
+O método POST é usado para enviar dados ao servidor, geralmente com o objetivo de criar um novo recurso. Diferente do GET, ele inclui um corpo na requisição com os dados a serem processados. Por exemplo, ao fazer POST /produtos com um corpo contendo { "nome": "Teclado", "preco": 199.90 }, o servidor criará um novo produto e retornará um status 201 Created, podendo incluir a localização do novo recurso no cabeçalho Location.
+
+=PUT
+O método PUT é utilizado para atualizar um recurso existente ou criar um novo, caso o recurso com o identificador especificado ainda não exista. A requisição geralmente contém todos os dados do recurso no corpo. Por exemplo, PUT /produtos/124 com os dados atualizados de um produto substitui completamente o recurso com ID 124. A resposta costuma ser 200 OK ou 201 Created, dependendo se foi atualizado ou criado.
+
+=DELETE
+O método DELETE serve para remover um recurso específico do servidor. A solicitação não costuma ter um corpo, apenas a URL do recurso. Por exemplo, DELETE /produtos/124 solicita a exclusão do produto com ID 124. Se a operação for bem-sucedida, o servidor responde com 204 No Content, indicando que o recurso foi deletado sem retornar um corpo.
+
+=HEAD
+O método HEAD é semelhante ao GET, mas a resposta não inclui o corpo, apenas os cabeçalhos. Ele é utilizado principalmente para verificar a existência ou metadados de um recurso, como o tamanho do conteúdo ou a data da última modificação. Por exemplo, ao fazer HEAD /produtos/123, o servidor retorna apenas os cabeçalhos da resposta como Content-Type e Content-Length.
+
+=TRACE
+O método TRACE é utilizado para fins de depuração. Ele retorna a requisição original recebida pelo servidor, permitindo que o cliente veja como a requisição foi tratada. Por exemplo, ao enviar TRACE /produtos, o servidor devolve a mesma linha de requisição que recebeu. Isso ajuda a identificar intermediários (como proxies) que possam estar alterando a requisição.
+
+=OPTIONS
+O método OPTIONS é usado para descobrir quais métodos HTTP são suportados por um recurso ou pelo servidor em geral. Ao enviar uma requisição OPTIONS /produtos, o servidor responde com um cabeçalho Allow que lista os métodos permitidos, como GET, POST, PUT, DELETE. É muito utilizado em ambientes com CORS para verificar permissões antes de uma requisição real.
+
+=CONNECT
+O método CONNECT é usado para estabelecer um túnel de comunicação com o servidor, frequentemente para realizar conexões seguras usando o protocolo HTTPS. Por exemplo, ao fazer CONNECT www.exemplo.com:443, o servidor cria um túnel para essa porta segura, e o cliente pode iniciar a comunicação criptografada.

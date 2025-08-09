@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Minha Casa</title>
+    </head>
+    <body>
+        <h1>Atuadores do Quarto:</h1>
+        <ul>
+            {% for key, value in atuadores.items() %}
+                <li>{{ key }}:</li>
+                {% if(value == 1) %} 
+                    <p>Sensor Ligado</p>
+                {% else %}
+                    <p>Sensor Desligado</p>
+                {% endif %}
+            {% endfor %}
+        </ul>
+        <p>Voltar para o <a href="/bedroom">Menu do Quarto</a>!</p>
+    </body>
+</html>

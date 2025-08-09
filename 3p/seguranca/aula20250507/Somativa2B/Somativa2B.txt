@@ -1,0 +1,58 @@
+ALICE
+
+Este cenário está usando MiTM, o cliente está falando com um servidor falso
+ESTA TELA PERTENCE A ALICE
+Aguardando solicitação de LOGIN ...
+RECEBI:  b'HELLO\nMOE'
+RECEBI:  b'CHALLENGE_RESPONSE\n+hfNu+TARq4i6EgXUSiYkg==\n233933b87c15e6be434a4df05bba31a1'
+ALICE compara local_hash=233933b87c15e6be434a4df05bba31a1 e prova_do_bob=233933b87c15e6be434a4df05bba31a1
+Este usuário é MOE
+Aguardando solicitação de LOGIN ...
+RECEBI:  b'HELLO\nMOE'
+RECEBI:  b'CHALLENGE_RESPONSE\n+hfNu+TARq4i6EgXUSiYkg==\n233933b87c15e6be434a4df05bba31a1'
+ALICE compara local_hash=78e24f6e26d2aa7551be8cf9035a0e4f e prova_do_bob=233933b87c15e6be434a4df05bba31a1
+Ataque detectado: Pedido de LOGIN NEGADO!!!
+Aguardando solicitação de LOGIN ...
+
+BOB
+
+Este cenário está usando MiTM, o cliente está falando com um servidor falso
+digite seu LOGIN: MOE
+digite sua SENHA: 4321
+RECEBI:  b'CHALLENGE\nLpBAlAGchOezd1R5YjI0tQ==\ngsBlAKH31wmRBh0cS13s6g=='
+RECEBI:  b'SUCCESS\n07fba87912fc20a57993a5eb3e4a06f1'
+BOB compara local_hash=07fba87912fc20a57993a5eb3e4a06f1 e prova_da_Alice=07fba87912fc20a57993a5eb3e4a06f1
+Este servidor é ALICE
+Aguardando mensagens do Servidor
+RECEBI:  b'HMAC\nOla MOE, voce esta autenticado na Alice\n411496b5d91a4ee987535b7e0f9e12fb'
+Mensagem válida
+RECEBI:  b'HMAC\nOla MOE, voce esta autenticado na Alice\n411496b5d91a4ee987535b7e0f9e12fb'
+Mensagem válida
+RECEBI:  b'HMAC\nOla MOE, voce esta autenticado na Alice\n411496b5d91a4ee987535b7e0f9e12fb'
+Mensagem válida
+RECEBI:  b'HMAC\nOla MOE, voce esta autenticado na Alice\n411496b5d91a4ee987535b7e0f9e12fb'
+Mensagem válida
+
+CHARLES
+
+Este cenário está usando MiTM, o cliente está falando com um servidor falso
+ESTA TELA PERTENCE A CHARLES
+Iniciando escuta ...
+Descobri o Endereço de Bob ('127.0.0.1', 52237)
+ESCUTEI BOB:  ['HELLO', 'MOE']
+Descobri o Endereço de Alice ('127.0.0.1', 9999)
+ESCUTEI ALICE:  ['CHALLENGE', 'LpBAlAGchOezd1R5YjI0tQ==', 'gsBlAKH31wmRBh0cS13s6g==']
+ESCUTEI BOB:  ['CHALLENGE_RESPONSE', '+hfNu+TARq4i6EgXUSiYkg==', '233933b87c15e6be434a4df05bba31a1']
+ESCUTEI ALICE:  ['SUCCESS', '07fba87912fc20a57993a5eb3e4a06f1']
+ESCUTEI ALICE:  ['HMAC', 'Ola MOE, voce esta autenticado na Alice', '411496b5d91a4ee987535b7e0f9e12fb']
+Digite <ENTER> para fazer o REPLAY ATTACK
+Fazendo REPLAY ATTACK contra ALICE
+Enviei:  b'HELLO\nMOE'
+Recebi:  ['CHALLENGE', 'nUm3k+cEDtzwC2uTjTC8Og==', 'gsBlAKH31wmRBh0cS13s6g==']
+Enviei:  b'CHALLENGE_RESPONSE\n+hfNu+TARq4i6EgXUSiYkg==\n233933b87c15e6be434a4df05bba31a1'
+Recebi:  ['FAILURE', 'SAI FORA, CHARLES ...']
+Aguardando a mensagem: 
+A autenticação falhou
+Tentando enviar uma mensagem duplicada para BOB ...
+b'HMAC\nOla MOE, voce esta autenticado na Alice\n411496b5d91a4ee987535b7e0f9e12fb'
+Iniciando escuta ...

@@ -1,0 +1,12 @@
+{
+    "senhas": {
+        "MOE": "6bb377d805dd6868d577c4638a89ae29",
+        "LARRY": "06067978ceee3e3651765b6e0397c1a4",
+        "DEN": "313cf55915b9e2ee8053644381333c3a"
+    },
+    "salts": {
+        "MOE": "gsBlAKH31wmRBh0cS13s6g==",
+        "LARRY": "tqEZncjaGeuSrwOS0zeRDw==",
+        "DEN": "4gx/+DrxQ0URZiRtVGWOoA=="
+    }
+}

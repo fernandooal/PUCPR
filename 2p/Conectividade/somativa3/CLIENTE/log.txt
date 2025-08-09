@@ -1,0 +1,10 @@
+2024-10-22 19:44:18.125340 : INICIO DO TESTE DE UPLOAD
+2024-10-22 19:44:19.131025 : Pasta raiz do servidor remoto: 
+['sftps.py', 'UPLOAD']
+2024-10-22 19:44:20.134504 : Criacao da pasta remota: OK
+2024-10-22 19:44:27.469062 : O arquivo log nao existe
+2024-10-22 19:44:34.883173 : O cliente enviou upload(TOPSECRET/log.txt)
+
+2024-10-22 19:44:34.884358 : Servidor ('127.0.0.1', 52490) fez a conexao
+2024-10-22 19:44:34.885172 : O arquivo foi transferido
+2024-10-22 19:44:53.154633 : FIM DO TESTE DE UPLOAD

@@ -1,0 +1,28 @@
+2024-10-01 17:59:55.646335 : MONITOR: aguardando dispositivos de IOT em 9999
+2024-10-01 17:59:55.646457 : CONSOLE: aguardando conexão do usuário em 8888
+2024-10-01 18:00:14.546578 : CONSOLE: O usuário conectou
+2024-10-01 18:00:14.554327 : CONSOLE RECEBEU: sala ligar
+2024-10-01 18:00:14.554453 : CONSOLE: O sensor sala nao existe
+2024-10-01 18:00:14.585699 : USUARIO RECEBEU: CONSOLE: digite SENSOR_ID COMANDO
+O sensor sala nao existe
+Sensores conectados: 
+2024-10-01 18:00:15.559629 : CONSOLE RECEBEU: sala consulta
+2024-10-01 18:00:15.559839 : CONSOLE: O sensor sala nao existe
+2024-10-01 18:00:15.560168 : USUARIO RECEBEU: O sensor sala nao existe
+
+2024-10-01 18:00:15.560339 : USUARIO RECEBEU: Sensores conectados: 
+2024-10-01 18:00:16.564992 : CONSOLE RECEBEU: todos consulta
+2024-10-01 18:00:17.570131 : CONSOLE RECEBEU: quarto shutdown
+2024-10-01 18:00:17.570783 : CONSOLE: O sensor quarto nao existe
+2024-10-01 18:00:17.571057 : USUARIO RECEBEU: O sensor quarto nao existe
+
+2024-10-01 18:00:17.571376 : USUARIO RECEBEU: Sensores conectados: 
+2024-10-01 18:00:18.575374 : CONSOLE RECEBEU: quarto consulta
+2024-10-01 18:00:18.575967 : CONSOLE: O sensor quarto nao existe
+2024-10-01 18:00:18.576324 : USUARIO RECEBEU: O sensor quarto nao existe
+
+2024-10-01 18:00:18.576637 : USUARIO RECEBEU: Sensores conectados: 
+2024-10-01 18:02:45.356902 : CONSOLE: aguardando conexão do usuário em 8888
+2024-10-01 18:02:49.538089 : IoT cozinha: O monitor nao está ativo!!!
+2024-10-01 18:02:49.539525 : IoT quarto: O monitor nao está ativo!!!
+2024-10-01 18:02:49.539959 : IoT sala: O monitor nao está ativo!!!

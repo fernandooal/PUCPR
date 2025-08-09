@@ -1,0 +1,9 @@
+{% extends "base/room.html" %}
+{% block content %}
+<h3>Banheiro:</h3>
+<ul>
+    {% for key, value in info.items() %}
+        <li><a href="{{ value }}">{{ key }}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "stdio.h": "c",
+        "__config": "c",
+        "__locale": "c",
+        "__threading_support": "c",
+        "locale": "c",
+        "complex": "c"
+    }
+}

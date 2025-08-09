@@ -1,0 +1,15 @@
+{% extends "base/devices.html" %}
+{% block content %}
+<h1>Atuadores do Banheiro:</h1>
+<ul>
+    {% for key, value in atuadores.items() %}
+        <li>{{ key }}:</li>
+        {% if(value == 1) %} 
+            <p>Sensor Ligado</p>
+        {% else %}
+            <p>Sensor Desligado</p>
+        {% endif %}
+    {% endfor %}
+</ul>
+<p>Voltar para o <a href="/bathroom">Menu do Banheiro</a>!</p>
+{% endblock %}
