@@ -1,0 +1,27 @@
+# Compilação C/C++
+*.o
+*.obj
+*.exe
+*.out
+*.a
+*.so
+*.dll
+
+# Arquivos de debug
+*.dSYM/
+*.pdb
+*.idb
+
+# VS Code
+.vscode/
+.history/
+
+# MacOS
+.DS_Store
+
+# Linux
+*~
+
+# Windows
+Thumbs.db
+desktop.ini
