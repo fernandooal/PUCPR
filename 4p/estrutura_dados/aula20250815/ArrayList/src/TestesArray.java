@@ -1,6 +1,6 @@
 import myutils.ArrayList;
 
-public class Main {
+public class TestesArray {
     public static void main(String[] args) {
 
         ArrayList<Integer> list = new ArrayList<>();
