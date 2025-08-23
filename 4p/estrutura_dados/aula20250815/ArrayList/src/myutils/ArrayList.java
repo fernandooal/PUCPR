@@ -1,5 +1,7 @@
 package myutils;
 
+import java.util.Arrays;
+
 public class ArrayList<T> {
     private T[] data;
     private int capacity;
@@ -60,13 +62,11 @@ public class ArrayList<T> {
     }
 
     public void remove(T e){
-        for (int i = 0; i < size; i++) {
-            if (data[i].equals(e)) {
-                data[i] = null;
-                shiftLeft(i);
-                size--;
-                break;
-            }
+        int index = indexOf(e);
+        if(index != -1){
+            data[index] = null;
+            shiftLeft(index);
+            size--;
         }
     }
 
@@ -119,5 +119,4 @@ public class ArrayList<T> {
         sb.append("]");
         return sb.toString();
     }
-
 }
