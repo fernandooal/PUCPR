@@ -13,7 +13,7 @@ int randint(int min, int max){
 }
 
 void monitorarBatimentos(void *param){
-	for (;; ){
+	for (;;){
 		int bpm = randint(40,150);
 		vPrintStringAndNumber(param, bpm);
 
@@ -28,7 +28,7 @@ void monitorarBatimentos(void *param){
 }
 
 void monitorarOxigenio(void *param){
-	for (;; ){
+	for (;;){
 		int saturacao = randint(80,100);
 		vPrintStringAndNumber(param, saturacao);
 
@@ -43,11 +43,11 @@ void monitorarOxigenio(void *param){
 }
 
 void monitorarTemperatura(void *param){
-	for (;; ){
+	for (;;){
 		int temp = randint(35,38);
 		vPrintStringAndNumber(param, temp);
 
-		if(temp < 36 || temp > 37.5){
+		if(temp < 36 || temp > 37){
 	 		vPrintString("Atenção! Febre em estado crítico\n");
 		}
 
@@ -66,6 +66,6 @@ void main_(void){
 
 	vTaskStartScheduler();
 
-	for (;; );
+	for (;;);
 }
 
