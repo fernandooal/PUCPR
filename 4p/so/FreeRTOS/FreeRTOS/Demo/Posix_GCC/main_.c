@@ -30,6 +30,8 @@ void main_(void){
     motor2 = VALOR_INICIAL_MOTORES;
     motor3 = VALOR_INICIAL_MOTORES;
 
+
+    vSemaphoreCreateBinary();
 	srand(time(NULL));
 
     xTaskCreate(controladorManobras, "controlador", 1000, NULL, 1, NULL);
