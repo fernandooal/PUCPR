@@ -6,14 +6,14 @@ Turma: U
 Aluno: Fernando Alonso Piroga da Silva
 */
 
+#include "FreeRTOS.h"
+#include "task.h"
+#include "basic_io.h"
+#include "semphr.h"
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
 #include <stdio.h>
-#include "basic_io.h"
-#include "FreeRTOS.h"
-#include "task.h"
-#include "semphr.h"
 
 // ---------------- PROTÓTIPOS ----------------
 void arfagem(void *param);
@@ -25,7 +25,11 @@ char *printMotores();
 // ---------------- VARIÁVEIS GLOBAIS ----------------
 SemaphoreHandle_t xSemaphore;
 
-volatile long motor0, motor1, motor2, motor3;
+volatile long motor0;
+volatile long motor1;
+volatile long motor2;
+volatile long motor3;
+
 volatile char sentido[15];     // guinada
 volatile char direcao[15];     // arfagem
 volatile char orientacao[15];  // rolagem
@@ -47,10 +51,10 @@ int main_(void) {
     }
 
     // criacao das tasks
-    xTaskCreate(arfagem, "Arfagem", 1000, "frente", 2, NULL);
-    xTaskCreate(guinada, "Guinada", 1000, "horario", 2, NULL);
-    xTaskCreate(rolagem, "Rolagem", 1000, "direita", 2, NULL);
-    xTaskCreate(radioFrequencia, "RadioFrequencia", 1000, NULL, 1, NULL);
+    xTaskCreate(arfagem, "arfagem", 1000, "frente", 2, NULL);
+    xTaskCreate(guinada, "guinada", 1000, "horario", 2, NULL);
+    xTaskCreate(rolagem, "rolagem", 1000, "direita", 2, NULL);
+    xTaskCreate(radioFrequencia, "controle", 1000, NULL, 1, NULL);
 
     // escalonador
     vTaskStartScheduler();
@@ -105,7 +109,7 @@ void arfagem(void *param) {
             vPrintString("[MANOBRA] ARFAGEM\n");
 
             vPrintString("[AÇÃO] ");
-            printf("%s", direcao);
+            vPrintString((const char*)direcao);
 
             vPrintString("\n[MOTORES]\n");
             char *msg = printMotores();
@@ -162,7 +166,7 @@ void guinada(void *param) {
             vPrintString("[MANOBRA] GUINADA\n");
 
             vPrintString("[AÇÃO] ");
-            printf("%s", sentido);
+            vPrintString((const char*)sentido);
 
             vPrintString("\n[MOTORES]\n");
             char *msg = printMotores();
@@ -219,7 +223,7 @@ void rolagem(void *param) {
             vPrintString("[MANOBRA] ROLAGEM\n");
 
             vPrintString("[AÇÃO] ");
-            printf("%s", orientacao);
+            vPrintString((const char*)orientacao);
 
             vPrintString("\n[MOTORES]\n");
             char *msg = printMotores();
@@ -255,8 +259,17 @@ void radioFrequencia(void *param) {
             sprintf((char*)orientacao, (r3 % 2 == 0) ? "direita"    : "esquerda");
 
             // print do sistema
-            printf("[RF] Alterou -> Sentido: %s | Direcao: %s | Orientacao: %s\n",
-                   sentido, direcao, orientacao);
+
+            vPrintString("[RF] Alterou -> Sentido: ");
+            vPrintString((const char*)sentido);
+
+            vPrintString(" | Direção: ");
+            vPrintString((const char*)direcao);
+
+            vPrintString(" | Orientação: ");
+            vPrintString((const char*)orientacao);
+
+            vPrintString("\n");
 
             // devolvo o semaforo
             xSemaphoreGive(xSemaphore);
