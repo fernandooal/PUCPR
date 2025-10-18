@@ -1,0 +1,3 @@
+[submodule "4p/estrutura_dados/hashTable"]
+	path = 4p/estrutura_dados/hashTable
+	url = https://github.com/cyberfika/hashTable
